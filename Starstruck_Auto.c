@@ -134,12 +134,14 @@ task main()
 		wait1Msec(5*t);
 		//move('b',s,t);
 		//wait1Msec(5*t);
-		//turn('l',s,t);
-		//wait1Msec(5*t);
+		die();
+		wait1Msec(3*t);
+		turn('l',s,t);
+		wait1Msec(5*t);
 		//turn('r',s,t);
 		//wait1Msec(5*t);
-		//diag(mv[0],s,t);
-		//wait1Msec(5*t);
+		diag(mv[0],s,t);
+		wait1Msec(5*t);
 		//diag(mv[3],s,t);
 		//wait1Msec(5*t);
 		//diag(mv[1],s,t);
@@ -148,8 +150,8 @@ task main()
 		//wait1Msec(5*t);
 		//still();
 		//wait1Msec(5*t);
-		//arm(s,t);
-		//wait1Msec(5*t);
+		arm(s,t);
+		wait1Msec(5*t);
 		//arm(-s,t);
-		//die();
+		die();
 	}

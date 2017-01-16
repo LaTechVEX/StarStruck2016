@@ -26,10 +26,10 @@ Motor Port 5        backLeft            VEX Motor             Back Left wheel
 
 Arm Raise and Catapult
 - This program allows you to control the movement of a robot's arm.
-- The "6U" button raises the arm up.
-- The "6D" button raises the arm up.
+- The "6U" button raises the arm.
+- The "6D" button lowers the arm.
 - The "5U" button flings the catapult.
-- The "5D" button resets the catapult to its restig positions.
+- The "5D" button resets the catapult to its resting positions.
 - The "8" buttons are used to set off a set of predefined tasks.
 
 [I/O Port]          [Name]              [Type]                [Description]
@@ -70,6 +70,8 @@ task main()
 		motor[backLeft] =  Y1 - X2 - X1;//Ch3+Ch1-Ch4
 
 		//Moving the Arm
+		//if one potientiometer reads higher than the other, need to slow down
+		//the motor and speed up the other; include a threshold
 		if(vexRT[Btn6U])
 		{
 			//all motors will move at the same speed
